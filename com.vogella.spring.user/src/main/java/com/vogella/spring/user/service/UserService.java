@@ -14,12 +14,13 @@ import reactor.core.publisher.Mono;
 
 @Service
 public class UserService {
-
+	
+	@Autowired
 	private UserRepository userRepository;
 
-	public UserService(UserRepository UserRepository) {
-		this.userRepository = UserRepository;
-	}
+// 	public UserService(UserRepository UserRepository) {
+// 		this.userRepository = UserRepository;
+// 	}
 
 	public Flux<User> getUsers(long limit) {
 		if (-1 == limit) {
